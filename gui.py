@@ -17,13 +17,13 @@ class GUI:
         self.create_passage_box()
         self.canvas_fun(60)
         self.submit_button()
-        self.highest_score()
+        # self.highest_score()
         self.typing_box()
         self.window.mainloop()
 
-    def highest_score(self):
-        highest_score_label = tk.Label(self.window, text="Highest score is {score here}", font=("Ariel", 25), fg='blue',)
-        highest_score_label.grid(row=3, column=0, padx=20, pady=20)
+    # def highest_score(self):
+    #     highest_score_label = tk.Label(self.window, text="Highest score is {score here}", font=("Ariel", 25), fg='blue',)
+    #     highest_score_label.grid(row=3, column=0, padx=20, pady=20)
 
     def create_passage_box(self):
         passage_box = tk.Label(self.window,justify='left',wraplength=800, text=self.passage, font=("Ariel", 30))
@@ -37,7 +37,7 @@ class GUI:
 
     def submit_button(self):
         submit = tk.Button(text="Submit",bg='green', command=self.calculate_speed, width=25, font=("Ariel", 15, "bold"))
-        submit.grid(row=2, column=0)
+        submit.grid(row=2, column=0, pady=30)
 
     def calculate_speed(self):
         timer = self.count

@@ -6,3 +6,4 @@ from gui import GUI
 # 4. Keep a file to keep track of score and sort them in ascending order
 
 GUI()
+

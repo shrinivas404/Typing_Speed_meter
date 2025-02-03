@@ -12,7 +12,7 @@ class GUI:
         self.count = 0
         self.window = tk.Tk()
         self.window.title("Typing Speed Meter")
-        self.window.minsize(1200,0)
+        self.window.minsize(1200,10)
         self.passage = random.choice(clean_passage_list)
         self.create_passage_box()
         self.canvas_fun(60)

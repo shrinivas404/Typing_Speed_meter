@@ -12,7 +12,7 @@ class GUI:
         self.count = 0
         self.window = tk.Tk()
         self.window.title("Typing Speed Meter")
-        self.window.geometry("%dx%d" % (self.window.winfo_screenwidth(), self.window.winfo_screenheight()))
+        self.window.minsize(1200,0)
         self.passage = random.choice(clean_passage_list)
         self.create_passage_box()
         self.canvas_fun(60)
@@ -26,7 +26,7 @@ class GUI:
     #     highest_score_label.grid(row=3, column=0, padx=20, pady=20)
 
     def create_passage_box(self):
-        passage_box = tk.Label(self.window,justify='left',wraplength=800, text=self.passage, font=("Ariel", 30))
+        passage_box = tk.Label(self.window,justify='left',wraplength=800, text=self.passage, font=("Ariel", 20))
         passage_box.grid(row=0, column=0, padx=20, pady=20)
 
     def typing_box(self):
